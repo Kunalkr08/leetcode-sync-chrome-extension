@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "LeetCode Sync",
+  "version": "1.0.0",
+  "description": "Automatically back up accepted LeetCode solutions to your GitHub repository.",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://leetcode.com/*",
+    "https://*.leetcode.com/*",
+    "https://api.github.com/*",
+    "https://api.openai.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://leetcode.com/problems/*"],
+      "js": ["page-bridge.js"],
+      "run_at": "document_start",
+      "world": "MAIN"
+    },
+    {
+      "matches": ["https://leetcode.com/problems/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle",
+      "world": "ISOLATED"
+    }
+  ],
+  "action": {
+    "default_title": "LeetCode Sync",
+    "default_popup": "popup.html"
+  },
+  "options_page": "options.html"
+}

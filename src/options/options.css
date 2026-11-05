@@ -1,0 +1,19 @@
+* { box-sizing: border-box; }
+body { margin: 0; background: #f1f5f9; color: #172033; font: 14px/1.5 Inter, system-ui, sans-serif; }
+.page { max-width: 760px; margin: 38px auto; padding: 0 20px 40px; }
+h1 { margin: 0; font-size: 26px; } header p { color: #64748b; margin: 5px 0 24px; }
+.panel { background: white; border: 1px solid #e2e8f0; border-radius: 14px; padding: 22px; margin-bottom: 16px; box-shadow: 0 4px 18px #0f172a08; }
+h2 { font-size: 16px; margin: 0 0 17px; }
+label { display: block; font-weight: 600; margin: 12px 0; }
+input:not([type=checkbox]) { display: block; width: 100%; margin-top: 6px; padding: 11px 12px; border: 1px solid #cbd5e1; border-radius: 8px; font: inherit; }
+small { display: block; color: #64748b; font-weight: 400; margin-top: 5px; }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.check { display: flex; align-items: center; gap: 9px; font-weight: 500; }
+button { padding: 10px 15px; border: 0; border-radius: 8px; font: inherit; font-weight: 650; cursor: pointer; }
+.primary { background: #2563eb; color: white; } .secondary { background: #e2e8f0; color: #172033; }
+.result { min-height: 20px; font-size: 13px; } .success { color: #15803d; } .failure { color: #b91c1c; }
+.warning { color: #92400e; background: #fef3c7; padding: 13px 15px; border-radius: 9px; font-size: 12px; }
+@media (max-width: 600px) { .grid { grid-template-columns: 1fr; gap: 0; } .page { margin-top: 20px; } }
+
+textarea, select { display: block; width: 100%; margin-top: 6px; padding: 11px 12px; border: 1px solid #cbd5e1; border-radius: 8px; font: inherit; resize: vertical; }
+.helper { color: #64748b; font-size: 12px; margin-top: -8px; }

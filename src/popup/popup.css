@@ -1,0 +1,21 @@
+* { box-sizing: border-box; }
+body { margin: 0; width: 360px; background: #0b1220; color: #e5eaf3; font: 13px/1.45 Inter, system-ui, sans-serif; }
+.shell { padding: 18px; }
+header { display: flex; align-items: center; gap: 11px; }
+.brand-mark { width: 38px; height: 38px; display: grid; place-items: center; border-radius: 11px; background: #f59e0b; color: #111827; font-weight: 900; }
+h1 { margin: 0; font-size: 16px; } header p { margin: 2px 0 0; color: #94a3b8; font-size: 11px; }
+.icon-button { margin-left: auto; border: 0; color: #cbd5e1; background: #1e293b; border-radius: 8px; padding: 7px 10px; cursor: pointer; }
+.connection { display: flex; align-items: center; gap: 8px; margin: 18px 0 13px; color: #aebbd0; font-size: 11px; }
+.dot { width: 8px; height: 8px; border-radius: 50%; background: #64748b; } .dot.online { background: #22c55e; } .dot.offline { background: #f59e0b; }
+.stats { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.stats div { padding: 12px; border: 1px solid #253247; background: #111c2e; border-radius: 10px; }
+.stats strong, .stats span { display: block; } .stats strong { font-size: 22px; } .stats span { color: #94a3b8; font-size: 11px; }
+.section-heading { display: flex; align-items: center; justify-content: space-between; margin: 19px 0 8px; }
+h2 { margin: 0; font-size: 12px; } .text-button { border: 0; color: #93c5fd; background: transparent; cursor: pointer; font-size: 11px; }
+.history { border: 1px solid #253247; border-radius: 10px; overflow: hidden; }
+.history-row { display: flex; justify-content: space-between; align-items: center; gap: 8px; padding: 10px; border-bottom: 1px solid #253247; }
+.history-row:last-child { border-bottom: 0; } .history-row strong, .history-row small { display: block; max-width: 220px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.history-row small, .muted { color: #94a3b8; font-size: 10px; } .muted { padding: 4px 10px; line-height: 1.6; }
+.status { font-size: 10px; text-transform: capitalize; } .status.synced { color: #4ade80; } .status.failed { color: #fca5a5; } .status.pending { color: #fcd34d; }
+footer { display: flex; justify-content: space-between; margin-top: 14px; color: #64748b; font-size: 10px; } a { color: #93c5fd; text-decoration: none; }
+.error { margin-top: 10px; color: #fca5a5; }

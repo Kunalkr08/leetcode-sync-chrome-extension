@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LeetCode Sync Settings</title>
+    <script type="module" src="./options.ts"></script>
+  </head>
+  <body>
+    <main class="page">
+      <header><h1>LeetCode Sync settings</h1><p>Connect your GitHub repository and choose what gets synced.</p></header>
+      <form id="settingsForm">
+        <section class="panel">
+          <h2>GitHub connection</h2>
+          <label>Personal access token
+            <input id="githubToken" type="password" autocomplete="off" placeholder="github_pat_…" />
+            <small>Create a fine-grained token with Contents: Read and write, for one repository only.</small>
+          </label>
+          <div class="grid">
+            <label>GitHub username / owner<input id="owner" required placeholder="your-username" /></label>
+            <label>Repository name<input id="repository" required placeholder="leetcode-solutions" /></label>
+          </div>
+          <label>Branch<input id="branch" required value="main" /></label>
+          <button type="button" id="testConnection" class="secondary">Test GitHub connection</button>
+          <p id="connectionResult" class="result" aria-live="polite"></p>
+        </section>
+        <section class="panel">
+          <h2>Problem notes</h2>
+          <p class="helper">Choose a problem whose notes template has been created, then edit and publish your notes.</p>
+          <label>OpenAI API key
+            <input id="openAiApiKey" type="password" autocomplete="off" placeholder="sk-…" />
+            <small>Stored in this browser profile. OpenAI API usage may incur charges.</small>
+          </label>
+          <label>Problem
+            <select id="notesProblem"><option value="">No saved notes yet</option></select>
+          </label>
+          <label>Approach<textarea id="approach" rows="4" placeholder="Explain your approach…"></textarea></label>
+          <div class="grid">
+            <label>Time complexity<input id="timeComplexity" placeholder="O(n)" /></label>
+            <label>Space complexity<input id="spaceComplexity" placeholder="O(n)" /></label>
+          </div>
+          <label>Personal notes<textarea id="personalNotes" rows="4" placeholder="Edge cases, observations, lessons learned…"></textarea></label>
+          <button type="button" id="saveNotes" class="secondary">Save notes to GitHub</button>
+          <p id="notesResult" class="result" aria-live="polite"></p>
+        </section>
+        <section class="panel">
+          <h2>Sync preferences</h2>
+          <label class="check"><input id="autoSync" type="checkbox" /> Automatically sync accepted submissions</label>
+          <label class="check"><input id="includeNotes" type="checkbox" /> Create a notes.md template for each problem</label>
+          <label class="check"><input id="generateAiExplanations" type="checkbox" /> Generate approach and complexity with OpenAI</label>
+          <label class="check"><input id="updateReadme" type="checkbox" /> Update the generated section in README.md</label>
+          <label class="check"><input id="preserveExistingSolutions" type="checkbox" /> Preserve existing solution files (never overwrite)</label>
+        </section>
+        <button type="submit" class="primary">Save settings</button>
+        <p id="saveResult" class="result" aria-live="polite"></p>
+      </form>
+      <p class="warning">Security and privacy: your GitHub and OpenAI keys are stored in this browser profile. When AI explanations are enabled, the submitted source code and problem details are sent to OpenAI. API usage may incur charges. Never share your browser profile or extension data, or paste either key into LeetCode or a public repository.</p>
+    </main>
+  </body>
+</html>

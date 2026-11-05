@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LeetCode Sync</title>
+    <script type="module" src="./popup.ts"></script>
+  </head>
+  <body>
+    <main class="shell">
+      <header>
+        <div class="brand-mark">LC</div>
+        <div><h1>LeetCode Sync</h1><p>Accepted solutions → GitHub</p></div>
+        <button id="settings" class="icon-button" title="Settings">⚙</button>
+      </header>
+      <section class="connection">
+        <span id="connectionDot" class="dot"></span>
+        <span id="connectionText">Checking GitHub connection…</span>
+      </section>
+      <section class="stats">
+        <div><strong id="syncedCount">0</strong><span>Synced</span></div>
+        <div><strong id="failedCount">0</strong><span>Failed</span></div>
+      </section>
+      <section>
+        <div class="section-heading"><h2>Recent activity</h2><button id="refresh" class="text-button">Refresh</button></div>
+        <div id="history" class="history"><p class="muted">No submissions synced yet.</p></div>
+      </section>
+      <footer><span>Personal backup utility</span><a href="https://github.com" target="_blank">GitHub ↗</a></footer>
+      <div id="error" class="error" hidden></div>
+    </main>
+  </body>
+</html>
