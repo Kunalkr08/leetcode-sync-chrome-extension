@@ -9,20 +9,25 @@
   <body>
     <main class="shell">
       <header>
-        <div class="brand-mark">LC</div>
-        <div><h1>LeetCode Sync</h1><p>Accepted solutions → GitHub</p></div>
-        <button id="settings" class="icon-button" title="Settings">⚙</button>
+        <div class="brand-mark" aria-hidden="true">LC</div>
+        <div class="brand-copy"><h1>LeetCode Sync</h1><p>Your solution archive</p></div>
+        <button id="settings" class="icon-button" title="Settings" aria-label="Open settings">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/><circle cx="8" cy="6" r="2"/><circle cx="16" cy="12" r="2"/><circle cx="10" cy="18" r="2"/></svg>
+        </button>
       </header>
-      <section class="connection">
-        <span id="connectionDot" class="dot"></span>
-        <span id="connectionText">Checking GitHub connection…</span>
-      </section>
-      <section class="stats">
-        <div><strong id="syncedCount">0</strong><span>Synced</span></div>
-        <div><strong id="failedCount">0</strong><span>Failed</span></div>
+      <section class="overview" aria-label="Sync overview">
+        <div class="overview-heading"><span>Sync overview</span><span class="overview-mark"><i></i> LIVE</span></div>
+        <div class="connection" role="status">
+          <span id="connectionDot" class="dot"></span>
+          <span id="connectionText">Checking GitHub connection…</span>
+        </div>
+        <div class="stats">
+          <div><span class="stat-label">Synced</span><strong id="syncedCount">0</strong><span class="stat-note">solutions backed up</span></div>
+          <div><span class="stat-label">Failed</span><strong id="failedCount">0</strong><span class="stat-note">need attention</span></div>
+        </div>
       </section>
       <section>
-        <div class="section-heading"><h2>Recent activity</h2><button id="refresh" class="text-button">Refresh</button></div>
+        <div class="section-heading"><h2>Recent activity</h2><button id="refresh" class="text-button"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M16.2 8A6.5 6.5 0 0 0 4.8 5.3L3.5 6.5M3.8 12a6.5 6.5 0 0 0 11.4 2.7l1.3-1.2M3.5 3.5v3h3m10 10v-3h-3"/></svg>Refresh</button></div>
         <div id="history" class="history"><p class="muted">No submissions synced yet.</p></div>
       </section>
       <footer><span>Personal backup utility</span><a href="https://github.com" target="_blank">GitHub ↗</a></footer>
