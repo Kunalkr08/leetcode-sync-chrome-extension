@@ -8,10 +8,14 @@
   </head>
   <body>
     <main class="page">
-      <header><h1>LeetCode Sync settings</h1><p>Connect your GitHub repository and choose what gets synced.</p></header>
+      <header class="page-header">
+        <p class="eyebrow"><span class="eyebrow-dot"></span>LEETCODE SYNC <span class="eyebrow-slash">/</span> SETTINGS</p>
+        <h1>Settings</h1>
+        <p class="intro">Manage where your solutions are saved and how your archive is maintained.</p>
+      </header>
       <form id="settingsForm">
         <section class="panel">
-          <h2>GitHub connection</h2>
+          <div class="panel-heading"><span class="section-index">01</span><div><h2>GitHub connection</h2><p>Choose where your solutions live.</p></div></div>
           <label>Personal access token
             <input id="githubToken" type="password" autocomplete="off" placeholder="github_pat_…" />
             <small>Create a fine-grained token with Contents: Read and write, for one repository only.</small>
@@ -25,7 +29,7 @@
           <p id="connectionResult" class="result" aria-live="polite"></p>
         </section>
         <section class="panel">
-          <h2>Problem notes</h2>
+          <div class="panel-heading"><span class="section-index">02</span><div><h2>Problem notes</h2><p>Keep the thinking behind each solution.</p></div></div>
           <p class="helper">Choose a problem whose notes template has been created, then edit and publish your notes.</p>
           <label>OpenAI API key
             <input id="openAiApiKey" type="password" autocomplete="off" placeholder="sk-…" />
@@ -44,7 +48,7 @@
           <p id="notesResult" class="result" aria-live="polite"></p>
         </section>
         <section class="panel">
-          <h2>Sync preferences</h2>
+          <div class="panel-heading"><span class="section-index">03</span><div><h2>Sync preferences</h2><p>Set the rhythm of your archive.</p></div></div>
           <label class="check"><input id="autoSync" type="checkbox" /> Automatically sync accepted submissions</label>
           <label class="check"><input id="includeNotes" type="checkbox" /> Create a notes.md template for each problem</label>
           <label class="check"><input id="generateAiExplanations" type="checkbox" /> Generate approach and complexity with OpenAI</label>
